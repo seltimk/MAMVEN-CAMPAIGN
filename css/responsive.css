@@ -1,0 +1,172 @@
+/* ==========================================================================
+   POLITICAL CAMPAIGN PORTFOLIO WEBSITE - RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. LAPTOPS & SMALL DESKTOPS (Max Width: 1024px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+
+  .hero-title { font-size: 2.75rem; }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-group {
+    justify-content: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 15px;
+    text-align: left !important;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+
+  .timeline-dot {
+    left: 20px !important;
+    right: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. TABLETS & PORTRAIT TABLETS (Max Width: 768px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  /* Pure CSS Mobile Navigation Menu */
+  .nav-toggle-label {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: var(--primary);
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+    border-bottom: 2px solid var(--accent);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-150%);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 999;
+  }
+
+  /* Trigger menu when checkbox is checked */
+  .nav-toggle-input:checked ~ .nav-menu {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-toggle-input:checked ~ .nav-toggle-label span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .nav-toggle-input:checked ~ .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle-input:checked ~ .nav-toggle-label span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+
+  .hero-title { font-size: 2.2rem; }
+
+  .hero-image-frame img {
+    height: 380px;
+  }
+
+  .card-grid-3,
+  .card-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .awareness-banner {
+    padding: 30px 20px;
+  }
+
+  .awareness-banner h3 {
+    font-size: 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. MOBILE PHONES (Max Width: 480px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+
+  .hero-title { font-size: 1.8rem; }
+  .hero-desc { font-size: 1rem; }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .form-card {
+    padding: 24px 16px;
+  }
+
+  .bank-card {
+    padding: 24px 16px;
+  }
+
+  .bank-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
