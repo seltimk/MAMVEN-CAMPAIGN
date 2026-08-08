@@ -177,6 +177,8 @@ h4 { font-size: 1.25rem; }
 }
 
 .party-badge {
+  width: 4rem;
+  /* height: 2rem; */
   background: var(--accent-gradient);
   color: var(--primary);
   font-weight: 800;
